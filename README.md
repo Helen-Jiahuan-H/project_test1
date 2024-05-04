@@ -29,4 +29,12 @@ This project will focus on using public data to explore the significance of “s
   * Commit the changes with the description “Updated DEMO.XPT linkage .do file".
 
 - Step 3) Data merging
-  * 
+  * Merge the survey data with the mortality data, ensuring alignment on the unique sequence numbers:
+    ```stata
+    //use your own username/project repo instead of the class repo below
+   global repo "https://github.com/jhustata/intermediate/raw/main/"
+   do ${repo}followup.do
+   save followup, replace 
+   import sasxport5 "https://wwwn.cdc.gov/Nchs/Nhanes/1999-2000/DEMO.XPT", clear
+   merge 1:1 seqn using followup
+   lookfor follow
