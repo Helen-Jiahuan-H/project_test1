@@ -11,7 +11,8 @@ This project will focus on using public data to explore the significance of “s
 ## Protocols
 
 - Step 1) Import the dataset
-  - Import the survey data from the 1999-2000 National Health and Nutrition Examination Survey (NHANES):
+  -Survey Data
+     - Import the survey data from the 1999-2000 National Health and Nutrition Examination Survey (NHANES):
     ```stata
-    import sasxport5 "https://wwwn.cdc.gov/Nchs/Nhanes/1999-2000/DEMO.XPT", clear
+       import sasxport5 "https://wwwn.cdc.gov/Nchs/Nhanes/1999-2000/DEMO.XPT", clear
  
