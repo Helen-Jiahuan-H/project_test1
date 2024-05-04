@@ -38,3 +38,10 @@ This project will focus on using public data to explore the significance of “s
     import sasxport5 "https://wwwn.cdc.gov/Nchs/Nhanes/1999-2000/DEMO.XPT", clear
     merge 1:1 seqn using followup
     lookfor follow
+
+- Step 4) Import the self-report health assessment data
+  * Import the specific health questionnaire data:
+    ```stata
+    import sasxport5 "https://wwwn.cdc.gov/Nchs/Nhanes/1999-2000/HUQ.XPT", clear
+    
+
