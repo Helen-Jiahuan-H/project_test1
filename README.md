@@ -67,6 +67,17 @@ This project will focus on using public data to explore the significance of “s
   import sasxport5 "https://wwwn.cdc.gov/Nchs/Nhanes/1999-2000/HUQ.XPT", clear 
   merge 1:1 seqn using demo_mortality, nogen
   sts graph, by(huq010) fail
+  stcox i.huq010
   ```
-  
-stcox i.huq010
+
+- Step 6) Inference
+  * Variable of interests is huq10, which is general health condition with the following categories:
+       * Excellent,
+       * Very good,
+       * Good,
+       * Fair, or
+       * Poor?
+       * Refused
+       * Don't know
+       * Missing
+  *
