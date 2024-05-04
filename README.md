@@ -48,3 +48,25 @@ This project will focus on using public data to explore the significance of “s
     import sasxport5 "https://wwwn.cdc.gov/Nchs/Nhanes/1999-2000/HUQ.XPT", clear
     ```
 
+- Step 5) Analysis
+  * Save the following as project.do and upload it to you repo. Keep updating it over the next two weeks.
+  ```stata
+  global repo "https://github.com/jhustata/intermediate/raw/main/"
+  do ${repo}followup.do
+  save followup, replace 
+  import sasxport5 "https://wwwn.cdc.gov/Nchs/Nhanes/1999-2000/DEMO.XPT", clear
+  merge 1:1 seqn using followup
+  lookfor follow
+  lookfor mortstat permth_int eligstat 
+  keep if eligstat==1
+  capture g years=permth_int/12
+  codebook mortstat
+  stset years, fail(mortstat)
+  sts graph, fail
+  save demo_mortality, replace 
+  import sasxport5 "https://wwwn.cdc.gov/Nchs/Nhanes/1999-2000/HUQ.XPT", clear 
+  merge 1:1 seqn using demo_mortality, nogen
+  sts graph, by(huq010) fail
+  ```
+  
+stcox i.huq010
