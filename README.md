@@ -22,3 +22,11 @@ This project will focus on using public data to explore the significance of “s
    global mort_1999_2000 https://ftp.cdc.gov/pub/HEALTH_STATISTICS/NCHS/datalinkage/linked_mortality/NHANES_1999_2000_MORT_2019_PUBLIC.dat
    //code
    cat https://ftp.cdc.gov/pub/HEALTH_STATISTICS/NCHS/datalinkage/linked_mortality/Stata_ReadInProgramAllSurveys.do
+
+- Step 2) Edit and Rename Provided Script
+  * Download `Stata_ReadInProgramAllSurveys.do`, edit it and rename it to `followup.do'.
+  * You may edit it so that it reads in the data directly from the website.
+  * Commit the changes with the description “Updated DEMO.XPT linkage .do file".
+
+- Step 3) Data merging
+  * 
