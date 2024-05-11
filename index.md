@@ -4,6 +4,7 @@ The potential confounders considered are age and sex
 
 **Methods:** 
 This is a uses dataset from NAHNES 1999-2000. We use the non-parametric and parametric methods to estimate the survival 
+Note: The [followup.do](followup.do) file is edited from [Stata_ReadInProgramAllSurveys.do](https://ftp.cdc.gov/pub/HEALTH_STATISTICS/NCHS/datalinkage/linked_mortality/Stata_ReadInProgramAllSurveys.do)
 
 **Results:** 
 click [here](dyndoc.html) to view nonparametric and semiparametric risk estimates from Stata
